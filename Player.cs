@@ -21,7 +21,7 @@ namespace RPSLS
         }
 
         // member methods
-        public void PickGesture()
+        public virtual void PickGesture()
         {
             while (true)
             {
@@ -40,7 +40,7 @@ namespace RPSLS
             }
         }
 
-        public void SelectName()
+        public virtual void SelectName()
         {
             Console.WriteLine("Welcome. Enter your name!");
             name = Console.ReadLine();

@@ -15,10 +15,14 @@ namespace RPSLS
         // member methods
         public void RunGame()
         {
-            // code coming soon
             Player playerOne = new Player();
+            Ai npc = new Ai();
+            
             playerOne.SelectName();
             playerOne.PickGesture();
+            npc.SelectName();
+            npc.PickGesture();
+
             Console.ReadLine();
         }
     }
