@@ -11,6 +11,7 @@ namespace RPSLS
         // member variables
         int numberOfRounds;
 
+
         // constructor
         public Game()
         {
@@ -65,6 +66,44 @@ namespace RPSLS
             }
         }
 
+        public int Rounds()
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Choose the number of rounds you'd like to play a best of");
+                    string chosenNumberOfRounds = Console.ReadLine();
+                    int chosenNumberOfRoundsInt = Convert.ToInt32(chosenNumberOfRounds);
 
+                    if (chosenNumberOfRoundsInt >= 3 && chosenNumberOfRoundsInt % 2 == 0)
+                    {
+                        return (chosenNumberOfRoundsInt / 2) + 1;
+                    }
+                    else if (chosenNumberOfRoundsInt >= 3 && chosenNumberOfRoundsInt % 2 == 1)
+                    {
+                        // took me 20 minutes to get the line directly below this
+                        return (int)Math.Ceiling((double)chosenNumberOfRoundsInt / 2);
+                    }
+                    else
+                    {
+                        return 2;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Something went wrong...");
+                    continue;
+                }
+                
+
+            }
+        }
+
+        public void Battle()
+        {
+            int winLimit = Rounds();
+
+        }
     }
 }
