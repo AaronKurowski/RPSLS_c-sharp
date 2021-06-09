@@ -16,7 +16,10 @@ namespace RPSLS
         public void RunGame()
         {
             // code coming soon
+            Player playerOne = new Player();
+            playerOne.SelectName();
+            playerOne.PickGesture();
+            Console.ReadLine();
         }
-
     }
 }
